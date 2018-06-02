@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>341</width>
-    <height>311</height>
+    <height>140</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,42 +19,23 @@
   <property name="minimumSize">
    <size>
     <width>341</width>
-    <height>311</height>
+    <height>140</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>341</width>
-    <height>311</height>
+    <height>140</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Resim Boyutlandırıcı Hakkında</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>321</width>
-     <height>191</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>../../../usr/share/plymouth/themes/Aylinux-Gunes/Aylinux-Gunes.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>210</y>
+     <y>20</y>
      <width>321</width>
      <height>61</height>
     </rect>
@@ -82,9 +63,9 @@ Hazırlayan: Cihan Alkan
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>280</y>
+     <y>100</y>
      <width>321</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">

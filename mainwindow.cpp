@@ -53,7 +53,7 @@ void MainWindow::createWidgets()
 {
     cmbNewResolution = new QComboBox(this);
     lblResolution = new QLabel(tr("Çözünürlük : "),this);
-    lblDragAndDrop = new QLabel(tr("Resmi Buraya Sürükleyin !"),this);
+    lblDragAndDrop = new QLabel(tr("Resmi Buraya \n  Sürükleyin !"),this);
     progressBar = new QProgressBar(this);
 
 }
@@ -84,15 +84,14 @@ void MainWindow::createLayouts()
 void MainWindow::createMenus()
 {
     fileMenu = menuBar()->addMenu(tr("&Dosya"));
-    languageMenu = new QMenu(tr("&Dil"),this);
-    fileMenu->addMenu(languageMenu);
+  //  languageMenu = new QMenu(tr("&Dil"),this);
+//    fileMenu->addMenu(languageMenu);
     aboutMenu = menuBar()->addMenu(tr("&Hakkında"));
 }
 
 void MainWindow::createActions()
 {
     resetAction = new QAction(tr("&Sıfırla"),this);
-  //  resetAction->setShortcut(QKeySequence::Quit);
     quitAction = new QAction(tr("&Çıkış"),this);
     quitAction->setShortcut(QKeySequence::Quit);
     applicationAbout = new QAction(tr("Hakkında"));
@@ -115,18 +114,18 @@ void MainWindow::addResolutionsCmb()
     cmbNewResolution->setEditable(true);
 
     cmbNewResolution->addItem("133x171");
-    cmbNewResolution->addItem("1680x1050");
-    cmbNewResolution->addItem("1400x1050");
-    cmbNewResolution->addItem("1280x1024");
-    cmbNewResolution->addItem("1280x960");
-    cmbNewResolution->addItem("1152x864");
-    cmbNewResolution->addItem("1024x768");
-    cmbNewResolution->addItem("800x600");
-    cmbNewResolution->addItem("640x480");
-    cmbNewResolution->addItem("720x400");
-    cmbNewResolution->addItem("640x400");
-    cmbNewResolution->addItem("640x350");
     cmbNewResolution->addItem("120x105");
+    cmbNewResolution->addItem("640x350");
+    cmbNewResolution->addItem("640x400");
+    cmbNewResolution->addItem("720x400");
+    cmbNewResolution->addItem("640x480");
+    cmbNewResolution->addItem("800x600");
+    cmbNewResolution->addItem("1024x768");
+    cmbNewResolution->addItem("1152x864");
+    cmbNewResolution->addItem("1280x960");
+    cmbNewResolution->addItem("1280x1024");
+    cmbNewResolution->addItem("1400x1050");
+    cmbNewResolution->addItem("1680x1050");
 
 }
 
@@ -191,18 +190,6 @@ void MainWindow::imageResize(QString path)
     QImage orginalImage(path);
     QImage resizeImage(orginalImage.scaled(imageWidth,imageHeight,Qt::IgnoreAspectRatio,Qt::SmoothTransformation));
     resizeImage.save(newImageSavePath+QDir::separator()+file.fileName(),extension.toLatin1());
-
-}
-
-void MainWindow::aboutApplication()
-{
-
-    QMessageBox::about(this,QString::fromUtf8("Resim Boyutlandırıcı Hakkında"),
-                       QString::fromUtf8("<a href='https://github.com/oltulu/Res-Boy'>Res-Boy 1.0</a>"
-                                         "<br>Resmi yeniden boyutlandırma uygulamasıdır."
-                                         "<br>Bu uygulama BSD ile lisanslanmıştır.</br>"
-                                         "<br>E-Okul için hızlı resim boyutlandırma amaçlanmıştır</br>"
-                                         "<br><a href='https://github.com/rutku/Mezgeldek'>Mezgeldek Çatallanarak hazırlanmıştır</a></br>"));
 
 }
 

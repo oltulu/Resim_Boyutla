@@ -48,9 +48,6 @@ private:
     bool setWidthAndHeight(QString text);
     void directoryCreate(QList<QUrl> path);
     void imageResize(QString path);
-    void aboutApplication();
-
-
 
 };
 
