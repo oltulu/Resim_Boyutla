@@ -53,7 +53,7 @@ void MainWindow::createWidgets()
 {
     cmbNewResolution = new QComboBox(this);
     lblResolution = new QLabel(tr("Çözünürlük : "),this);
-    lblDragAndDrop = new QLabel(tr("Resmi Buraya \n  Sürükleyin !"),this);
+    lblDragAndDrop = new QLabel(tr("Resmi Buraya \n  Sürükleyin!"),this);
     progressBar = new QProgressBar(this);
 
 }
@@ -198,7 +198,7 @@ void MainWindow::resetleme()
     delete lblDragAndDrop;
     delete progressBar;
 
-    lblDragAndDrop = new QLabel(tr("Resmi Buraya Sürükleyin !"),this);
+    lblDragAndDrop = new QLabel(tr("  Resmi Buraya \n    Sürükleyin!"),this);
     progressBar = new QProgressBar(this);
     QWidget *widget = new QWidget(this);
 
