@@ -171,7 +171,7 @@ void MainWindow::directoryCreate(QList<QUrl> path)
         if((images.size()-i)==1)
             progressBar->setValue(i+1);
     }
-    lblDragAndDrop->setText(tr("İşlem Bitti !"));
+    lblDragAndDrop->setText(tr("     İşlem Bitti ! \n   Yeni Resim İçin \nMenüden Sıfırlayınız."));
 
 
 }
